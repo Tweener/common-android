@@ -1,0 +1,24 @@
+ext {
+
+    compiler = [
+            java  : JavaVersion.VERSION_1_8,
+            kotlin: '1.4.10'
+    ]
+
+    android = [
+            minSdk    : 21,
+            targetSdk : 29,
+            compileSdk: 29
+    ]
+
+    application = [
+            versionCode: 1,
+            versionName: "1.0.3",
+    ]
+
+    // Libraries
+    jUnitVersion = '4.13'
+    espressoVersion = '3.3.0'
+
+    androidCoreKtxVersion = '1.3.1'
+}
