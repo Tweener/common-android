@@ -35,4 +35,10 @@ dependencies {
     // Testing
     testImplementation "junit:junit:$jUnitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+
+    // ReactiveX
+    implementation "io.reactivex.rxjava3:rxjava:$rxJavaVersion"
+    implementation "io.reactivex.rxjava3:rxandroid:$rxAndroidVersion"
+    implementation "io.reactivex.rxjava3:rxkotlin:$rxKotlinVersion"
+    implementation "com.jakewharton.rxbinding4:rxbinding:$rxBindingVersion"
 }
