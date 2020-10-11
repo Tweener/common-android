@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="dateYesterday">Yesterday</string>
+    <string name="dateToday">Today</string>
+    <string name="dateTomorrow">Tomorrow</string>
+
+</resources>
