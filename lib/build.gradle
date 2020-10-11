@@ -41,4 +41,6 @@ dependencies {
     implementation "io.reactivex.rxjava3:rxandroid:$rxAndroidVersion"
     implementation "io.reactivex.rxjava3:rxkotlin:$rxKotlinVersion"
     implementation "com.jakewharton.rxbinding4:rxbinding:$rxBindingVersion"
+
+    implementation "androidx.recyclerview:recyclerview:$recyclerViewVersion"
 }
