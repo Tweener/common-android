@@ -1,7 +1,7 @@
 package com.tweener.common.android.kotlinextension
 
-import android.content.Context
 import com.tweener.common.android.R
+import com.tweener.common.android.resourceprovider.ResourceProvider
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.TimeUnit
@@ -51,12 +51,12 @@ fun Date.isTomorrow(locale: Locale = Locale.getDefault()) = this.isTomorrow(Date
 /**
  * Returns either "Today" if this date is today, "Yesterday" if the date is yesterday, or format this date using the given [pattern], based on the given [locale] and [timeZone] if set.
  */
-fun Date?.formatAsDateOrPattern(pattern: String, context: Context, locale: Locale, timeZone: TimeZone? = null): String {
+fun Date?.formatAsDateOrPattern(pattern: String, resourceProvider: ResourceProvider, locale: Locale, timeZone: TimeZone? = null): String {
     return this?.let {
         return when {
-            isToday(locale) -> context.getString(R.string.dateToday)
-            isYesterday(locale) -> context.getString(R.string.dateYesterday)
-            isTomorrow(locale) -> context.getString(R.string.dateTomorrow)
+            isToday(locale) -> resourceProvider.getString(R.string.dateToday)
+            isYesterday(locale) -> resourceProvider.getString(R.string.dateYesterday)
+            isTomorrow(locale) -> resourceProvider.getString(R.string.dateTomorrow)
             else -> format(pattern, locale, timeZone)
         }
     } ?: run {
