@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     def ext = rootProject.extensions.ext
@@ -15,6 +16,15 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
+    }
+
+    compileOptions {
+        sourceCompatibility ext.compiler.java
+        targetCompatibility ext.compiler.java
+    }
+
+    kotlinOptions {
+        jvmTarget = ext.compiler.java
     }
 
     buildTypes {
@@ -41,6 +51,12 @@ dependencies {
     implementation "io.reactivex.rxjava3:rxandroid:$rxAndroidVersion"
     implementation "io.reactivex.rxjava3:rxkotlin:$rxKotlinVersion"
     implementation "com.jakewharton.rxbinding4:rxbinding:$rxBindingVersion"
+
+    // Dagger
+    implementation "com.google.dagger:dagger:$daggerVersion"
+    implementation "com.google.dagger:dagger-android-support:$daggerVersion"
+    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+    kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
 
     implementation "androidx.recyclerview:recyclerview:$recyclerViewVersion"
 }
