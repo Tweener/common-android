@@ -22,6 +22,7 @@ ext {
 
     androidCoreKtxVersion = '1.3.2'
     recyclerViewVersion = '1.1.0'
+    androidMaterialVersion = '1.2.1'
 
     rxJavaVersion = '3.0.6'
     rxKotlinVersion = '3.0.1'

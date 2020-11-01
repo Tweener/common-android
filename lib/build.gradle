@@ -46,6 +46,9 @@ dependencies {
     testImplementation "junit:junit:$jUnitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
 
+    // Android
+    implementation "com.google.android.material:material:$androidMaterialVersion"
+
     // ReactiveX
     implementation "io.reactivex.rxjava3:rxjava:$rxJavaVersion"
     implementation "io.reactivex.rxjava3:rxandroid:$rxAndroidVersion"
